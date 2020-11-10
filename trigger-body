@@ -1,0 +1,14 @@
+@(
+    not(
+        equals(
+            triggerBody()?[' --FIELD-- ']?['Value'], 
+            ''
+        )
+    )
+)
+
+@(not(equals(triggerBody()?[' --FIELD-- ']?['Value'], null)))
+@(not(equals(triggerBody()?[' --FIELD-- ']?['Value'], ' --VALUE-- ')))
+@(not(equals(triggerBody()?[' --FIELD-- '], null)))
+@(not(equals(triggerBody()?[' --FIELD-- '], null)))
+
