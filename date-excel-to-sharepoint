@@ -1,5 +1,10 @@
 if(
+    ## IS FIELD EMPTY?
 	empty( --FIELD -- ), 
+    
+    ## IF YES, RETURN NULL
 	null, 
+    
+    ## ELSE RETURN DATE CALCULATION
 	addDays('1899-12-30',int( --FIELD -- ),'yyyy-MM-dd')
 )
