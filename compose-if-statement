@@ -1,0 +1,36 @@
+if(
+    ## CONDITION
+    or(
+        equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- '),
+        equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- '),
+        equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- ')
+    ),
+    
+    ## THEN
+    ' --OUTPUT VALUE-- ',
+    
+    ## ELSE
+    if(
+        ## CONDITION
+        or(
+            equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- '),
+            equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- '),
+            equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- ')
+        ),
+        
+        ## THEN
+        ' --OUTPUT VALUE-- ',
+
+        ## ELSE
+        if(
+            ## CONDITION
+            equals(items(' --LOOP-- ')?[' --FIELD-- ']?['Value'], ' --VALUE-- '),
+            
+            ## THEN
+            ' --OUTPUT VALUE-- ',
+            
+            ## ELSE
+            ' --OUTPUT VALUE-- '
+        )
+    )
+)
